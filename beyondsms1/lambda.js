@@ -1,7 +1,9 @@
 exports.handler = function (event, context, callback) {
-    let jsonStr = event;
+    {
+  "body" : $input.json('$')
+}
 
-    let parsedObj = JSON.parse(jsonStr);
+    
 
   callback(null, { "message": "Successfully executed" });
 }

@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "beyondsms1/lambda.js",
-        "code": "exports.handler = function (event, context, callback) {\n    let jsonStr = event;\n\n    let parsedObj = JSON.parse(jsonStr);\n\n  callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n    {\n  \"body\" : $input.json('$')\n}\n\n    \n\n  callback(null, { \"message\": \"Successfully executed\" });\n}",
         "triggers": [
           {
             "resourceName": "apigusEast1testProject1doStuffpost",
@@ -39,6 +39,14 @@
           "timeout": 60,
           "memory": 128,
           "layers": []
+        },
+        "testCases": {
+          "5fe41e01-e567-41ab-a203-992150644b93": {
+            "id": "5fe41e01-e567-41ab-a203-992150644b93",
+            "name": "Unnamed event",
+            "functionId": "7ebab410-b0ab-4754-80a7-76daed83fcfe",
+            "event": "notifyClientsMessage {\"id\":\"100574948\",\"type\":\"DeliveryOrderEvent\",\"eventTime\":\"2019-04-23 22:58:59.0\",\"data\":{\"delivery_code\":\"276841\",\"pickup_code\":\"546187\",\"delivery_order_event_id\":\"100574948\",\"description\":\"something\",\"delivery_order_number\":\"100367942\",\"customer_order_number\":\"7124644\",\"owner_company_name\":\"Santikos\",\"site_id\":\"100001680\",\"site_name\":\"Palladium\",\"device_name\":\"Palladium\",\"motor_position\":4,\"notes\":\"Order,1\",\"action_type_cd\":\"PICKUP\",\"status_cd\":\"PICKEDUP\",\"user_first_name\":\"DeviceService\",\"user_last_name\":\"User\",\"user_input\":\"546187\",\"is_offline\":\"N\",\"action_date\":\"2019-04-24 03:58:58.0\",\"cre_date\":\"2019-04-23 22:58:59.0\"}} at side_id 100001680 at sha santikos"
+          }
         }
       }
     },
@@ -131,7 +139,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1556075961784
+    "lastSave": 1556076438881
   },
   "VCS_STATE": {
     "provider": "GitHub",
